@@ -26,6 +26,13 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
+# Deployment/platform-specific files
+/nixpacks.toml
+/.railway.json
+/Procfile
+/DEPLOYMENT_CHECKLIST.md
+*.backup
+
 # Local diagnostics and ad-hoc scripts (may include temporary secrets)
 /check-env.php
 /check_email_queue.ps1
