@@ -13,6 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
+        if (Schema::hasTable('tags')) {
+            return;
+        }
+
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
             $table->string('name');

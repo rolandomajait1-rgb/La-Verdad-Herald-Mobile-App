@@ -8,9 +8,11 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::table('authors', function (Blueprint $table) {
-            $table->dropColumn('name');
-        });
+        if (Schema::hasColumn('authors', 'name')) {
+            Schema::table('authors', function (Blueprint $table) {
+                $table->dropColumn('name');
+            });
+        }
     }
 
     public function down()
