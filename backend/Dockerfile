@@ -34,7 +34,7 @@ RUN chown -R www-data:www-data /var/www \
 EXPOSE ${PORT:-10000}
 
 # Start command
-CMD php artisan migrate --force && \
+CMD php artisan migrate:fresh --force && \
     php artisan config:cache && \
     php artisan route:cache && \
     php artisan view:cache && \

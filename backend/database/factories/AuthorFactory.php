@@ -20,10 +20,10 @@ class AuthorFactory extends Factory
             'user_id' => \App\Models\User::factory(),
             'bio' => $this->faker->paragraph(),
             'website' => $this->faker->url(),
-            'social_links' => [
+            'social_links' => json_encode([
                 'twitter' => $this->faker->url(),
                 'linkedin' => $this->faker->url(),
-            ],
+            ]),
         ];
     }
 }

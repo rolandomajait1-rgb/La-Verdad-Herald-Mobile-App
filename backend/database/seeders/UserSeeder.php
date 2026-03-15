@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Test User',
                 'password' => Hash::make(env('TEST_USER_PASSWORD', 'password123')),
-                'role' => User::ROLE_USER,
+                'role' => 'user',
             ]
         );
 
@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Admin User',
                 'password' => Hash::make(env('ADMIN_PASSWORD', 'admin123')),
-                'role' => User::ROLE_ADMIN,
+                'role' => 'admin',
             ]
         );
         // Create author record for admin
@@ -41,7 +41,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Moderator User',
                 'password' => Hash::make(env('MODERATOR_PASSWORD', 'moderator123')),
-                'role' => User::ROLE_MODERATOR,
+                'role' => 'moderator',
             ]
         );
     }
